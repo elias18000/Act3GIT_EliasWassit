@@ -5,18 +5,11 @@ public class principal {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		Random rand = new Random();
-<<<<<<< HEAD
 		for (int i = 0; i < 30; i++) {
-=======
-		
-		for (int i = 0; i < 20; i++) {
->>>>>>> refs/heads/Rama1
 			int numero = rand.nextInt(10);
 			System.out.println((i + 1 ) + ": " + numero);
 		}
-<<<<<<< HEAD
-		
-=======
+
 		System.out.println("Dame dos numeros y te dre los numeros que hay en medio contando de 7 en 7: ");
 		int numero1 = Integer.parseInt(scan.next());
 		int numero2 = Integer.parseInt(scan.next());
@@ -29,6 +22,5 @@ public class principal {
 		if(numero3 >= numero1 && numero3 <= numero2 ) {
 		System.out.println("numero3: " + numero3 );
 		}
->>>>>>> refs/heads/Rama1
 	}
 }
