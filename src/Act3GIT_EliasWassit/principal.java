@@ -4,23 +4,32 @@ public class principal {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		Random rand = new Random();
-		for (int i = 0; i < 30; i++) {
-			int numero = rand.nextInt(10);
-			System.out.println((i + 1 ) + ": " + numero);
-		}
+        Random rand = new Random();
 
-		System.out.println("Dame dos numeros y te dre los numeros que hay en medio contando de 7 en 7: ");
-		int numero1 = Integer.parseInt(scan.next());
-		int numero2 = Integer.parseInt(scan.next());
-		System.out.println("dame un tercer numero");
-		int numero3 = Integer.parseInt(scan.next());
-	
-		for (int i = numero1; i <= numero2; i += 7) {
-			System.out.println("numero: " + i);
-		}
-		if(numero3 >= numero1 && numero3 <= numero2 ) {
-		System.out.println("numero3: " + numero3 );
-		}
+        // Generar y mostrar 30 números aleatorios
+        System.out.println("Generando 30 números aleatorios entre 0 y 9:");
+        for (int i = 0; i < 30; i++) {
+            System.out.println((i + 1) + ": " + rand.nextInt(10));
+        }
+
+        // Solicitar datos del usuario
+        System.out.println("\nDame dos números (el primero menor que el segundo):");
+        int numero1 = scan.nextInt();
+        int numero2 = scan.nextInt();
+
+        System.out.println("Dame un tercer número:");
+        int numero3 = scan.nextInt();
+
+        System.out.println("Indica el incremento:");
+        int incremento = scan.nextInt();
+
+        // Mostrar los números en el rango con incremento
+        for (int i = numero1; i <= numero2; i += incremento) {
+            System.out.println("Número: " + i);
+            if (i == numero3) System.out.println("¡Número especial: " + numero3 + "!");
+        }
+        
+        scan.close();
+        
 	}
 }
